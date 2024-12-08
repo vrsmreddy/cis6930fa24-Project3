@@ -232,7 +232,7 @@ Refer to the `COLLABORATORS` file for detailed information on team contributions
 ## Video Demonstration
 A narrated demonstration of the project is available:
 - [YouTube Link](https://youtu.be/dFO8EbnhvEA)
-- Local video file: `demo.mp4`
+
 
 
 # Explanation of Tests and Pipfile
