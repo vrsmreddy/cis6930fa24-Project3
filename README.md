@@ -221,6 +221,10 @@ Sample visualizations include:
   - Official documentation for Flask and Matplotlib.
 
 ## Collaboration
+Collaborators:
+
+Plotly - https://plotly.com/python/bubble-charts/ - Provided guidance on creating bubble charts in Python using Plotly, essential for visualizing large datasets with various dimensions.
+StackOverflow - https://stackoverflow.com/questions/71944846/plot-big-dataset-clusters-in-python - Offered advice on methods to visualize large clusters in datasets, crucial for understanding the distribution and grouping in data analysis.
 Refer to the `COLLABORATORS` file for detailed information on team contributions.
 
 
