@@ -84,11 +84,6 @@ CIS6930FA24-PROJECT3/
    ```
 6. Open your browser and navigate to `http://localhost:5000` to use the web interface.
 
-### Running Tests
-To run tests, use the following command:
-```bash
-pytest
-```
 
 ## Usage Guide
 1. Upload one or more NormanPD-style incident PDFs through the web interface by selecting a file or providing a URL.
