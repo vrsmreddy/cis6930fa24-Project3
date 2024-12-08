@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pypdf2 = "==1.26.0"
+matplotlib = "*"
+pandas = "*"
+scikit-learn = "*"
+folium = "*"
+numpy = "*"
+certifi = "*"
+plotly = "*"
+
+[dev-packages]
+pytest = "==7.0.1"
+black = {version = "*", allow_prereleases = true}
+
+[requires]
+python_version = "3.12"

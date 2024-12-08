@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
+}
+
+/* Animated background gradient */
+body::before {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    z-index: -1;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #7f5af0, #22d1ee);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position:0% 50%; }
+    50% { background-position:100% 50%; }
+    100% { background-position:0% 50%; }
+}
+
+/* Neon particle effects */
+body::after {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    pointer-events: none;
+    background: radial-gradient(circle at 20% 20%, rgba(127,90,240,0.2), transparent 30%), 
+                radial-gradient(circle at 80% 60%, rgba(255,255,255,0.1), transparent 40%),
+                radial-gradient(circle at 60% 30%, rgba(34,209,238,0.15), transparent 30%);
+    background-size: cover;
+    opacity: 0.5;
+    animation: floatParticles 10s linear infinite;
+}
+
+@keyframes floatParticles {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.navbar {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    animation: fadeDown 1s forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+    text-shadow: 0 0 10px #7f5af0;
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-secondary {
+    transition: all 0.4s ease;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: "";
+    position: absolute;
+    top:-50%; left:-50%; width:200%; height:200%;
+    background: radial-gradient(circle, rgba(127,90,240,0.3), transparent 60%);
+    opacity:0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-secondary:hover::before {
+    opacity: 0.2;
+}
+
+.btn-secondary:hover {
+    background: #7f5af0;
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(127,90,240,0.4), 0 0 10px rgba(127,90,240,0.4);
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-card {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+    will-change: transform;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity:0; transform:translateY(30px);
+  }
+  to {
+    opacity:1; transform:translateY(0);
+  }
+}
+
+/* Card 3D hover effect */
+.form-container:hover .form-card {
+    transform: rotateX(5deg) rotateY(-5deg);
+}
+
+.form-check-input:checked {
+    background-color: #7f5af0;
+    border-color: #7f5af0;
+}
+
+.form-control {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: #7f5af0;
+    box-shadow: 0 0 5px rgba(127,90,240,0.5);
+    transform: scale(1.02);
+}
+
+label.form-check-label, label.form-label {
+    color: #e0e0e0;
+}
+
+.form-check-inline {
+    transition: transform 0.3s ease;
+}
+
+.form-check-inline:hover {
+    transform: scale(1.05);
+}
