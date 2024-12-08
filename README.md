@@ -227,7 +227,7 @@ Refer to the `COLLABORATORS` file for detailed information on team contributions
 
 ## Video Demonstration
 A narrated demonstration of the project is available:
-- [YouTube Link](#)
+- [YouTube Link](https://youtu.be/dFO8EbnhvEA)
 - Local video file: `video/demo.mp4`
 
 
